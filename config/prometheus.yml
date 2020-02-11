@@ -2,8 +2,8 @@ global:
   scrape_interval:     5s
   evaluation_interval: 30s
 scrape_configs:
-  - job_name: probot
-    metrics_path: /probot/metrics
+  - job_name: chargo
+    honor_labels: true
     static_configs:
-      - targets:
-        - '{{CHARGO_HOST}}'
+    - targets:
+      - '{{ CHARGO_HOST }}'
