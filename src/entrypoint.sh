@@ -6,7 +6,7 @@ export SERVER_PORT="${PORT:-8080}"
 
 #
 # This is the probot host that is collecting our metrics
-sed -i "s/{{CHARGO_HOST}}/${CHARGO_HOST}/g" /etc/prometheus/prometheus.yml
+sed -i "s/{{DEVPOLLS_HOST}}/${DEVPOLLS_HOST}/g" /etc/prometheus/prometheus.yml
 
 echo "Starting up server"
 "/bin/prometheus" \

@@ -3,6 +3,6 @@
 set -e
 heroku login
 heroku container:login
-heroku container:push web -a chargo-p3
+heroku container:push web -a devpolls-prometheus
 
-heroku container:release web -a chargo-p3
+heroku container:release web -a devpolls-prometheus
