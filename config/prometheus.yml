@@ -6,10 +6,9 @@ scrape_configs:
     honor_labels: true
     static_configs:
     - targets:
-      - '{{ DEVPOLLS_HOST }}'
+      - '{{DEVPOLLS_HOST}}'
 remote_write:
-      - url: https://prometheus-blocks-prod-us-central1.grafana.net/api/prom/push
-        basic_auth:
-          username: 125345
-          password: '{{ DEVPOLLS_GRAFANA_API_KEY }}'
-      
+  - url: https://prometheus-blocks-prod-us-central1.grafana.net/api/prom/push
+    basic_auth:
+      username: 125345
+      password: '{{DEVPOLLS_GRAFANA_API_KEY}}'
