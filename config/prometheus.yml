@@ -3,14 +3,20 @@ global:
   evaluation_interval: 30s
 
 scrape_configs:
-  - job_name: nepaltoday-qa-prometheus
+  - job_name: nepaltoday-qa
     honor_labels: true
     static_configs:
     - targets:
       - 'nepaltoday-api-qa.herokuapp.com'
 
+  - job_name: nepaltoday-prod
+    honor_labels: true
+    static_configs:
+    - targets:
+      - 'nepaltoday-api.herokuapp.com'
+
 remote_write:
   - url: https://prometheus-prod-10-prod-us-central-0.grafana.net/api/prom/push
     basic_auth:
       username: 542436
-      password: '{{DEVPOLLS_GRAFANA_API_KEY}}'
+      password: '{{GRAFANA_API_KEY}}'
