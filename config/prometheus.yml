@@ -10,7 +10,7 @@ scrape_configs:
       - 'nepaltoday-api-qa.herokuapp.com'
 
 remote_write:
-  - url: https://prometheus-prod-10-prod-us-central-0.grafana.net/api/prom
+  - url: https://prometheus-prod-10-prod-us-central-0.grafana.net/api/prom/push
     basic_auth:
       username: 542436
       password: '{{DEVPOLLS_GRAFANA_API_KEY}}'
